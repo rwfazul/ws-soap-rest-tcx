@@ -17,13 +17,13 @@ Para o mapeamento, foi criado o modelo de classes correspondente ao arquivo [rot
 
 - pom.xml
 	– Libs
-		+ jaxws-rt;
-		+ jaxb-core;
-		+ jaxb-impl;
-		+ streambuffer;
-		+ policy;
-		+ gmbal-api-only;
-		+ jsr181-api;
-		+ jaxws-api;
-		+ ha-api;
-		+ stax-ex.
+		- jaxws-rt;
+		- jaxb-core;
+		- jaxb-impl;
+		- streambuffer;
+		- policy;
+		- gmbal-api-only;
+		- jsr181-api;
+		- jaxws-api;
+		- ha-api;
+		- stax-ex.
