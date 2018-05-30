@@ -16,7 +16,7 @@ Para o mapeamento, foi criado o modelo de classes correspondente ao arquivo [rot
 ## Jax-ws + Tomcat/Glassfish com Maven
 
 - pom.xml
-	– Libs
+	- Libs (dependencies)
 		- jaxws-rt;
 		- jaxb-core;
 		- jaxb-impl;
