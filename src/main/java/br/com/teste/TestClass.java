@@ -8,6 +8,7 @@ package br.com.teste;
 import java.io.File;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 /**
@@ -19,12 +20,17 @@ public class TestClass {
     public static void main(String[] args) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(ListCostumers.class);
         
+        // Unmarshall
         Unmarshaller unmarshaller = jc.createUnmarshaller();
         File xml = new File("src/input.xml");
         
         ListCostumers c = (ListCostumers) unmarshaller.unmarshal(xml);
         System.out.println(c);
         
+        // Marshall
+        Marshaller marshaller = jc.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        marshaller.marshal(c, System.out); // .(c, new File("output.xml"));
     }
     
 }

@@ -5,6 +5,8 @@
  */
 package br.com.teste;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -30,10 +32,14 @@ public class Customer {
     String phoneNumber;
     @XmlElement(name = "address")
     Address address;
+    
+    @XmlElementWrapper(name = "tasks")
+    @XmlElement(name = "task")
+    List<String> tasks = new ArrayList<>();
 
     @Override
     public String toString() {
-        return "Customer{" + "id=" + id + ", status=" + status + ", name=" + name + ", phoneNumber=" + phoneNumber + ", address=" + address + '}';
+        return "Customer{" + "id=" + id + ", status=" + status + ", name=" + name + ", phoneNumber=" + phoneNumber + ", address=" + address + ", tasks=" + tasks + '}';
     }
-   
+
 }

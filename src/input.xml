@@ -7,6 +7,10 @@
 		<city>Any Town</city>
 	    </address>
 	    <phone-number>555-1111</phone-number>
+	    <tasks>
+	         <task>Task one</task>
+	         <task>Task two</task>
+	    </tasks>
 	</customer>
 	<customer id="456" status="bad">
 	    <name>Jhon Man</name>
@@ -15,5 +19,16 @@
 		<city>The Town</city>
 	    </address>
 	    <phone-number>555-1111</phone-number>
+    	    <tasks>
+	         <task>Task three</task>
+	    </tasks>
+	</customer>
+	<customer id="789" status="unknown">
+	    <name>Michael Blue</name>
+	    <address>
+		<street>Any Street</street>
+		<city>Some Town</city>
+	    </address>
+	    <phone-number>666-1111</phone-number>
 	</customer>
 </listCostumers>
