@@ -8,6 +8,7 @@ package br.com.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -16,6 +17,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 class Extensions {
     
-    @XmlAttribute(name = "LX")
+    @XmlElement(name = "LX")
     LX lx;
 }

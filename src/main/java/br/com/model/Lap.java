@@ -9,6 +9,7 @@ import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -20,31 +21,31 @@ public class Lap {
     @XmlAttribute(name = "StartTime")
     Date startTime;
     
-    @XmlAttribute(name = "TotalTimeSeconds")
+    @XmlElement(name = "TotalTimeSeconds")
     Double totalTimeSeconds;
     
-    @XmlAttribute(name = "DistanceMeters")
+    @XmlElement(name = "DistanceMeters")
     Double distanceMeters;
     
-    @XmlAttribute(name = "MaximumSpeed")
+    @XmlElement(name = "MaximumSpeed")
     Double maximumSpeed;
     
-    @XmlAttribute(name = "Calories")
+    @XmlElement(name = "Calories")
     Integer calories;
     
-    @XmlAttribute(name = "Intensity")
+    @XmlElement(name = "Intensity")
     String intensity;
     
-    @XmlAttribute(name = "Cadence")
+    @XmlElement(name = "Cadence")
     Integer cadence;
     
-    @XmlAttribute(name = "TriggerMethod")
+    @XmlElement(name = "TriggerMethod")
     String triggerMethod;
     
-    @XmlAttribute(name = "Track")
+    @XmlElement(name = "Track")
     Track track;
     
-    @XmlAttribute(name = "Extensions")
+    @XmlElement(name = "Extensions")
     Extensions extensions;
     
 }

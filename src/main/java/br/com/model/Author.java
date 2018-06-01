@@ -7,7 +7,7 @@ package br.com.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Author {
     
-    @XmlAttribute(name = "Name")
+    @XmlElement(name = "Name")
     String name;
     
-    @XmlAttribute(name = "LangID")
+    @XmlElement(name = "LangID")
     String langID;
     
-    @XmlAttribute(name = "PartNumber")
+    @XmlElement(name = "PartNumber")
     String partNumber;
     
-    @XmlAttribute(name = "Build")
+    @XmlElement(name = "Build")
     Build build;
     
 }

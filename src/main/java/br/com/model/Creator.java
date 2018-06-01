@@ -8,6 +8,7 @@ package br.com.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -16,15 +17,18 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 class Creator {
     
-    @XmlAttribute(name = "Name")
+    @XmlAttribute(name = "xsi:type")
+    String xsitype;
+    
+    @XmlElement(name = "Name")
     String name;
     
-    @XmlAttribute(name = "UnitId")
+    @XmlElement(name = "UnitId")
     Integer unitId;
     
-    @XmlAttribute(name = "ProductId")
+    @XmlElement(name = "ProductId")
     Integer productId;
     
-    @XmlAttribute(name = "Version")
+    @XmlElement(name = "Version")
     Version version;
 }

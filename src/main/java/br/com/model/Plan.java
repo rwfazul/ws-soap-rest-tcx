@@ -8,6 +8,7 @@ package br.com.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -22,10 +23,10 @@ class Plan {
     @XmlAttribute(name = "IntervalWorkout")
     Boolean intervalWorkout;
     
-    @XmlAttribute(name = "Name")
+    @XmlElement(name = "Name")
     String name;
     
-    @XmlAttribute(name = "Extensions")
+    @XmlElement(name = "Extensions")
     Extensions extensions;
     
 }

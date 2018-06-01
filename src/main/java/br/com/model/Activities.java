@@ -8,6 +8,7 @@ package br.com.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -17,7 +18,10 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Activities {
     
-    @XmlAttribute(name = "Activity")
+    @XmlAttribute(name = "xsi:type")
+    String xsitype;
+    
+    @XmlElement(name = "Activity")
     Activity activity;
     
 }

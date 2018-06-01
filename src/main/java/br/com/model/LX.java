@@ -7,7 +7,7 @@ package br.com.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 class LX {
     
-    @XmlAttribute(name = "AvgSpeed")
+    @XmlElement(name = "AvgSpeed")
     Double AvgSpeed;
     
 }

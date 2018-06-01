@@ -9,6 +9,7 @@ import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -18,22 +19,22 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 class TrackPoint {
     
-    @XmlAttribute(name = "Time")
+    @XmlElement(name = "Time")
     Date time;
     
-    @XmlAttribute(name = "AltitudeMeters")
+    @XmlElement(name = "AltitudeMeters")
     Double altitudeMeters;
     
-    @XmlAttribute(name = "DistanceMeters")
+    @XmlElement(name = "DistanceMeters")
     Double distanceMeters;
     
-    @XmlAttribute(name = "Cadence")
+    @XmlElement(name = "Cadence")
     Integer cadence;
     
-    @XmlAttribute(name = "SensorState")
+    @XmlElement(name = "SensorState")
     String sensorState;
     
-    @XmlAttribute(name = "Position")
+    @XmlElement(name = "Position")
     Position position;
     
 }

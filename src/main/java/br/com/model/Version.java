@@ -8,6 +8,7 @@ package br.com.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -16,16 +17,16 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 class Version {
     
-    @XmlAttribute(name = "VersionMajor")
+    @XmlElement(name = "VersionMajor")
     Integer versionMajor;
     
-    @XmlAttribute(name = "VersionMinor")
+    @XmlElement(name = "VersionMinor")
     Integer versionMinor;
     
-    @XmlAttribute(name = "BuildMajor")
+    @XmlElement(name = "BuildMajor")
     Integer buildMajor;
     
-    @XmlAttribute(name = "BuildMinor")
+    @XmlElement(name = "BuildMinor")
     Integer buildMinor;
     
 }

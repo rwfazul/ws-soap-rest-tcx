@@ -8,6 +8,7 @@ package br.com.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -16,10 +17,10 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TrainingCenterDatabase {
     
-    @XmlAttribute(name = "Activities")
+    @XmlElement(name = "Activities")
     Activities activities;
     
-    @XmlAttribute(name = "Author")
+    @XmlElement(name = "Author")
     Author author;
     
 }

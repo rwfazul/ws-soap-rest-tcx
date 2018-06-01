@@ -4,9 +4,13 @@
  * and open the template in the editor.
  */
 package br.com.model;
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 
 /**
  *
@@ -15,15 +19,16 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Activity {
     
-    @XmlAttribute(name = "Id")
+    @XmlElement(name = "Id")
     Integer id;
     
     @XmlAttribute(name = "Sport")
     String sport;
     
-    @XmlAttribute(name = "Lap")
-    Lap lap;
+    @XmlElementWrapper(name = "laps")
+    @XmlElement(name = "Lap")
+    List<Lap> laps = new ArrayList<>();
     
-    @XmlAttribute(name = "Training")
+    @XmlElement(name = "Training")
     Training training;
 }
