@@ -10,17 +10,31 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
 
 /**
  *
  * @author isabella
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-class Track {
+public class Track {
     
-    @XmlElementWrapper(name = "TrackPoints")
-    @XmlElement(name = "TrackPoint")
-    List<TrackPoint> trackPoints = new ArrayList<>();
+    @XmlElement(name = "Trackpoint")
+    private List<TrackPoint> trackPoints = new ArrayList<>();
+
+    public Track() {
+    }
+
+    public List<TrackPoint> getTrackPoints() {
+        return trackPoints;
+    }
+
+    public void setTrackPoints(List<TrackPoint> trackPoints) {
+        this.trackPoints = trackPoints;
+    }
+
+    @Override
+    public String toString() {
+        return "Track{" + "trackPoints=" + trackPoints + '}';
+    }
     
 }

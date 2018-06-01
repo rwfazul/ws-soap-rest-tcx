@@ -15,15 +15,36 @@ import javax.xml.bind.annotation.XmlElement;
  * @author isabella
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-class Training {
+public class Training {
     
     @XmlAttribute(name = "VirtualPartner")
-    Boolean virtualPartner;
+    private Boolean virtualPartner;
     
     @XmlElement(name = "Plan")
-    Plan plan;
-    
-    @XmlElement(name = "Creator")
-    Creator creator;
-    
+    private Plan plan;
+
+    public Training() {
+    }
+
+    public Boolean getVirtualPartner() {
+        return virtualPartner;
+    }
+
+    public void setVirtualPartner(Boolean virtualPartner) {
+        this.virtualPartner = virtualPartner;
+    }
+
+    public Plan getPlan() {
+        return plan;
+    }
+
+    public void setPlan(Plan plan) {
+        this.plan = plan;
+    }
+
+    @Override
+    public String toString() {
+        return "Training{" + "virtualPartner=" + virtualPartner + ", plan=" + plan + '}';
+    }
+
 }

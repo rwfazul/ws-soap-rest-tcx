@@ -15,18 +15,58 @@ import javax.xml.bind.annotation.XmlElement;
  * @author isabella
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-class Plan {
+public class Plan {
     
     @XmlAttribute(name = "Type")
-    String type;
+    private String type;
     
     @XmlAttribute(name = "IntervalWorkout")
-    Boolean intervalWorkout;
+    private Boolean intervalWorkout;
     
     @XmlElement(name = "Name")
-    String name;
+    private String name;
     
     @XmlElement(name = "Extensions")
-    Extensions extensions;
+    private Extensions extensions;
+
+    public Plan() {
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Boolean getIntervalWorkout() {
+        return intervalWorkout;
+    }
+
+    public void setIntervalWorkout(Boolean intervalWorkout) {
+        this.intervalWorkout = intervalWorkout;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Extensions getExtensions() {
+        return extensions;
+    }
+
+    public void setExtensions(Extensions extensions) {
+        this.extensions = extensions;
+    }
+
+    @Override
+    public String toString() {
+        return "Plan{" + "type=" + type + ", intervalWorkout=" + intervalWorkout + ", name=" + name + ", extensions=" + extensions + '}';
+    }
     
 }

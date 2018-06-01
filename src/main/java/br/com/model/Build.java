@@ -14,9 +14,25 @@ import javax.xml.bind.annotation.XmlElement;
  * @author isabella
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-class Build {
+public class Build {
     
     @XmlElement(name = "Version")
-    Version version;
-    
+    private Version version;
+
+    public Build() {
+    }
+
+    public Version getVersion() {
+        return version;
+    }
+
+    public void setVersion(Version version) {
+        this.version = version;
+    }
+
+    @Override
+    public String toString() {
+        return "Build{" + "version=" + version + '}';
+    }
+   
 }

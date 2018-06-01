@@ -5,7 +5,7 @@
  */
 package br.com.model;
 
-import java.util.Date;
+import java.util.Calendar;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -19,33 +19,114 @@ import javax.xml.bind.annotation.XmlElement;
 public class Lap {
     
     @XmlAttribute(name = "StartTime")
-    Date startTime;
+    private Calendar startTime;
     
     @XmlElement(name = "TotalTimeSeconds")
-    Double totalTimeSeconds;
+    private Double totalTimeSeconds;
     
     @XmlElement(name = "DistanceMeters")
-    Double distanceMeters;
+    private Double distanceMeters;
     
     @XmlElement(name = "MaximumSpeed")
-    Double maximumSpeed;
+    private Double maximumSpeed;
     
     @XmlElement(name = "Calories")
-    Integer calories;
+    private Integer calories;
     
     @XmlElement(name = "Intensity")
-    String intensity;
+    private String intensity;
     
     @XmlElement(name = "Cadence")
-    Integer cadence;
+    private Integer cadence;
     
     @XmlElement(name = "TriggerMethod")
-    String triggerMethod;
+    private String triggerMethod;
     
     @XmlElement(name = "Track")
-    Track track;
+    private Track track;
     
     @XmlElement(name = "Extensions")
-    Extensions extensions;
-    
+    private Extensions extensions;
+
+    public Lap() {
+    }
+
+
+    public Double getTotalTimeSeconds() {
+        return totalTimeSeconds;
+    }
+
+    public void setTotalTimeSeconds(Double totalTimeSeconds) {
+        this.totalTimeSeconds = totalTimeSeconds;
+    }
+
+    public Double getDistanceMeters() {
+        return distanceMeters;
+    }
+
+    public void setDistanceMeters(Double distanceMeters) {
+        this.distanceMeters = distanceMeters;
+    }
+
+    public Double getMaximumSpeed() {
+        return maximumSpeed;
+    }
+
+    public void setMaximumSpeed(Double maximumSpeed) {
+        this.maximumSpeed = maximumSpeed;
+    }
+
+    public Integer getCalories() {
+        return calories;
+    }
+
+    public void setCalories(Integer calories) {
+        this.calories = calories;
+    }
+
+    public String getIntensity() {
+        return intensity;
+    }
+
+    public void setIntensity(String intensity) {
+        this.intensity = intensity;
+    }
+
+    public Integer getCadence() {
+        return cadence;
+    }
+
+    public void setCadence(Integer cadence) {
+        this.cadence = cadence;
+    }
+
+    public String getTriggerMethod() {
+        return triggerMethod;
+    }
+
+    public void setTriggerMethod(String triggerMethod) {
+        this.triggerMethod = triggerMethod;
+    }
+
+    public Track getTrack() {
+        return track;
+    }
+
+    public void setTrack(Track track) {
+        this.track = track;
+    }
+
+    public Extensions getExtensions() {
+        return extensions;
+    }
+
+    public void setExtensions(Extensions extensions) {
+        this.extensions = extensions;
+    }
+
+    @Override
+    public String toString() {
+        return "Lap{" + "startTime=" + startTime + ", totalTimeSeconds=" + totalTimeSeconds + ", distanceMeters=" + distanceMeters + ", maximumSpeed=" + maximumSpeed + ", calories=" + calories + ", intensity=" + intensity + ", cadence=" + cadence + ", triggerMethod=" + triggerMethod + ", track=" + track + ", extensions=" + extensions + '}';
+    }
+       
 }

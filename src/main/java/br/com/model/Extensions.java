@@ -7,7 +7,6 @@ package br.com.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -15,8 +14,25 @@ import javax.xml.bind.annotation.XmlElement;
  * @author isabella
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-class Extensions {
+public class Extensions {
     
     @XmlElement(name = "LX")
-    LX lx;
+    private LX lx;
+
+    public Extensions() {
+    }
+
+    public LX getLx() {
+        return lx;
+    }
+
+    public void setLx(LX lx) {
+        this.lx = lx;
+    }
+
+    @Override
+    public String toString() {
+        return "Extensions{" + "lx=" + lx + '}';
+    }
+   
 }

@@ -15,9 +15,25 @@ import javax.xml.bind.annotation.XmlElement;
  */
 
 @XmlAccessorType(XmlAccessType.FIELD)
-class LX {
+public class LX {
     
     @XmlElement(name = "AvgSpeed")
-    Double AvgSpeed;
+    private Double AvgSpeed;
+
+    public LX() {
+    }
+
+    public Double getAvgSpeed() {
+        return AvgSpeed;
+    }
+
+    public void setAvgSpeed(Double AvgSpeed) {
+        this.AvgSpeed = AvgSpeed;
+    }
+
+    @Override
+    public String toString() {
+        return "LX{" + "AvgSpeed=" + AvgSpeed + '}';
+    }
     
 }

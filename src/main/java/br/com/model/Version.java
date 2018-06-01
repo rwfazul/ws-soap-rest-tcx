@@ -7,7 +7,6 @@ package br.com.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -15,18 +14,58 @@ import javax.xml.bind.annotation.XmlElement;
  * @author isabella
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-class Version {
+public class Version {
     
     @XmlElement(name = "VersionMajor")
-    Integer versionMajor;
+    private Integer versionMajor;
     
     @XmlElement(name = "VersionMinor")
-    Integer versionMinor;
+    private Integer versionMinor;
     
     @XmlElement(name = "BuildMajor")
-    Integer buildMajor;
+    private Integer buildMajor;
     
     @XmlElement(name = "BuildMinor")
-    Integer buildMinor;
+    private Integer buildMinor;
+
+    public Version() {
+    }
+
+    public Integer getVersionMajor() {
+        return versionMajor;
+    }
+
+    public void setVersionMajor(Integer versionMajor) {
+        this.versionMajor = versionMajor;
+    }
+
+    public Integer getVersionMinor() {
+        return versionMinor;
+    }
+
+    public void setVersionMinor(Integer versionMinor) {
+        this.versionMinor = versionMinor;
+    }
+
+    public Integer getBuildMajor() {
+        return buildMajor;
+    }
+
+    public void setBuildMajor(Integer buildMajor) {
+        this.buildMajor = buildMajor;
+    }
+
+    public Integer getBuildMinor() {
+        return buildMinor;
+    }
+
+    public void setBuildMinor(Integer buildMinor) {
+        this.buildMinor = buildMinor;
+    }
+
+    @Override
+    public String toString() {
+        return "Version{" + "versionMajor=" + versionMajor + ", versionMinor=" + versionMinor + ", buildMajor=" + buildMajor + ", buildMinor=" + buildMinor + '}';
+    }
     
 }

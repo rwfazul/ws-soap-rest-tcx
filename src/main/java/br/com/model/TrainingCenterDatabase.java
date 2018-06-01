@@ -7,20 +7,45 @@ package br.com.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author isabella
  */
+@XmlRootElement(name = "TrainingCenterDatabase")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TrainingCenterDatabase {
     
     @XmlElement(name = "Activities")
-    Activities activities;
+    private Activities activities;
     
     @XmlElement(name = "Author")
-    Author author;
+    private Author author;
+
+    public TrainingCenterDatabase() {
+    }
+
+    public Activities getActivities() {
+        return activities;
+    }
+
+    public void setActivities(Activities activities) {
+        this.activities = activities;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "TrainingCenterDatabase{" + "activities=" + activities + ", author=" + author + '}';
+    }
     
 }
