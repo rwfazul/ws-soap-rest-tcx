@@ -23,7 +23,7 @@ public class Activity {
     private String sport;
     
     @XmlElement(name = "Id")
-    private Calendar id;
+    private Calendar id; // XMLGregorianCalendar
     
     // @XmlElementWrapper(name = "Laps")
     @XmlElement(name = "Lap")

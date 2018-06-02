@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlElement;
 public class Lap {
     
     @XmlAttribute(name = "StartTime")
-    private Calendar startTime;
+    private Calendar startTime; // XMLGregorianCalendar
     
     @XmlElement(name = "TotalTimeSeconds")
     private Double totalTimeSeconds;
@@ -51,6 +51,13 @@ public class Lap {
     public Lap() {
     }
 
+    public Calendar getStartTime() {
+        return startTime;
+    }
+    
+    public void setStartTime(Calendar startTime) {
+        this.startTime = startTime;
+    }
 
     public Double getTotalTimeSeconds() {
         return totalTimeSeconds;
