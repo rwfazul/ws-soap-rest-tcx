@@ -16,7 +16,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>JAXWSServlet</servlet-name>
-        <url-pattern>/primeirows</url-pattern>
+        <url-pattern>/rotaws</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
