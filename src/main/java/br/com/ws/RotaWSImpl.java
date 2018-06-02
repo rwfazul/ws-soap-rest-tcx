@@ -1,14 +1,49 @@
-package br.csi.ws;
+package br.com.ws;
 
+import java.util.Date;
 import javax.jws.WebService;
 
-@WebService(endpointInterface="br.csi.ws.PrimeiroWS")
-public class PrimeiroWSImpl implements PrimeiroWS {
+@WebService(endpointInterface = "br.com.ws.RotaWS")
+public class RotaWSImpl implements RotaWS {
 
-        @Override
-	public String getMsgAsString() {
-		// TODO Auto-generated method stub
-		return "Web service com tomcat e maven!";
-	}
+    @Override
+    public Date getHoraInicio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Date getDuracao() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Double getDistancia() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ListaLaps getLaps() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Integer getQuantidadeLaps() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ListaDouble getDistanciaPorLap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ListaDate getDuracaoPorLap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getTracksPorLap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
