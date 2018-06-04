@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlElement;
  */
 
 @XmlAccessorType(XmlAccessType.FIELD)
-class TrackPoint {
+public class TrackPoint {
     
     @XmlElement(name = "Time")
     private Calendar time;
