@@ -1,6 +1,5 @@
 package br.com.ws;
 
-import java.util.Date;
 import javax.jws.WebMethod;
 import javax.jws.WebResult;
 import javax.jws.WebService;
@@ -17,7 +16,7 @@ public interface RotaWS {
      */
     @WebMethod(operationName = "horaInicio")
     @WebResult(name = "horaInicio")
-    public Date getHoraInicio(); 
+    public String getHoraInicio(); 
  
     /**
      *
@@ -25,7 +24,7 @@ public interface RotaWS {
      */
     @WebMethod(operationName = "duracaoTotal")
     @WebResult(name = "duracaoTotal")
-    public Date getDuracao();
+    public String getDuracao();
 
     /**
      *
