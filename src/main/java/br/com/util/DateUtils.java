@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
+import org.joda.time.Seconds;
 
 /**
  *
@@ -36,12 +37,16 @@ public class DateUtils {
     }
 
     public static String diffTime(Date start, Date end) {
-        Period diff = new Period(new DateTime(start), new DateTime(end));  
-        
-        Integer hours = diff.getHours();
-        Integer minutes = diff.getMinutes();
-        Integer seconds = diff.getSeconds();    
-    
+        Period diff = new Period( new DateTime(start), new DateTime(end) );  
+        return formatHour(diff.getHours(), diff.getMinutes(), diff.getSeconds());
+    }
+
+    public static String getHourForSecond(Integer seconds) {    
+        Period period = new Period(Seconds.seconds(seconds));
+        return formatHour(period.getHours(), period.getMinutes(), period.getSeconds());
+    }
+
+    private static String formatHour(Integer hours, Integer minutes, Integer seconds) {
         // garante que hora, min e seg estejam no formato correto (2 digitos)
         return ( (hours   < 10 ? "0" : "") + hours   + ":" +
                  (minutes < 10 ? "0" : "") + minutes + ":" +
