@@ -1,5 +1,9 @@
 package br.com.ws;
 
+import br.com.model.wrappers.ListaDuracoes;
+import br.com.model.wrappers.ListaLaps;
+import br.com.model.wrappers.ListaDistancias;
+import br.com.model.Track;
 import javax.jws.WebMethod;
 import javax.jws.WebResult;
 import javax.jws.WebService;
@@ -14,8 +18,8 @@ public interface RotaWS {
      *
      * @return hora de inicio (hora:min:seg) da Activity
      */
-    @WebMethod(operationName = "horaInicio")
-    @WebResult(name = "horaInicio")
+    @WebMethod(operationName = "horaDeInicio")
+    @WebResult(name = "horaDeInicio")
     public String getHoraInicio(); 
  
     /**
@@ -47,7 +51,7 @@ public interface RotaWS {
      * @return quantidade/total de Laps
      */
     @WebMethod(operationName = "quantidadeDeLaps")
-    @WebResult(name = "quantidadeLaps")
+    @WebResult(name = "quantidadeDeLaps")
     public Integer getQuantidadeLaps();
     
     /**
@@ -56,7 +60,7 @@ public interface RotaWS {
      */
     @WebMethod(operationName = "distanciaPorLap")
     @WebResult(name = "distanciasLaps")
-    public ListaDouble getDistanciaPorLap(); 
+    public ListaDistancias getDistanciaPorLap(); 
     
     /**
      *
@@ -64,14 +68,14 @@ public interface RotaWS {
      */
     @WebMethod(operationName = "duracaoPorLap")
     @WebResult(name = "duracoesLaps")
-    public ListaDate getDuracaoPorLap();
+    public ListaDuracoes getDuracaoPorLap();
     
     /**
      *
-     * @return todos os Tracks de cada Lap (?) ou de um Lap em especifico (?)
+     * @return todos os TrackPoints de um Lap em especifico
      */
-    @WebMethod(operationName = "todosOsTracks")
+    @WebMethod(operationName = "todosOsTracksDeUmLap")
     @WebResult(name = "tracks")
-    public String getTracksPorLap();
+    public Track getTracksPorLap();
     
 }

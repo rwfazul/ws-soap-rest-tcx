@@ -1,6 +1,10 @@
 package br.com.ws;
 
+import br.com.model.wrappers.ListaDuracoes;
+import br.com.model.wrappers.ListaLaps;
+import br.com.model.wrappers.ListaDistancias;
 import br.com.model.Lap;
+import br.com.model.Track;
 import br.com.model.TrackPoint;
 import br.com.model.TrainingCenterDatabase;
 import br.com.parser.ParserTCX;
@@ -15,7 +19,7 @@ public class RotaWSImpl implements RotaWS {
     private static TrainingCenterDatabase tcd;
     
     public RotaWSImpl() {
-       tcd = ParserTCX.unmarshal();
+        tcd = ParserTCX.unmarshal();
     }
     
     @Override
@@ -42,34 +46,44 @@ public class RotaWSImpl implements RotaWS {
 
     @Override
     public Double getDistancia() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Double distanciaTotal = 0.0;
+        List<Lap> laps = tcd.getActivities().getActivity().getLaps();
+        for (Lap lap : laps)
+            distanciaTotal += lap.getDistanceMeters();
+        return Math.floor(distanciaTotal * 100) / 100; // round 2 casas decimais
     }
 
     @Override
     public ListaLaps getLaps() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new ListaLaps(tcd.getActivities().getActivity().getLaps());
     }
 
     @Override
     public Integer getQuantidadeLaps() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return tcd.getActivities().getActivity().getLaps().size();
     }
 
     @Override
-    public ListaDouble getDistanciaPorLap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ListaDistancias getDistanciaPorLap() {
+        ListaDistancias ld = new ListaDistancias();
+        for (Lap lap : tcd.getActivities().getActivity().getLaps())
+            ld.getDistancias().add(Math.floor(lap.getDistanceMeters() * 100) / 100); // round 2 casas decimais
+        return ld;
     }
 
     @Override
-    public ListaDate getDuracaoPorLap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ListaDuracoes getDuracaoPorLap() {
+        ListaDuracoes ld = new ListaDuracoes("HH:mm:ss");
+        for (Lap lap : tcd.getActivities().getActivity().getLaps()) 
+            ld.getDuracoes().add( DateUtils.getHourForSecond( lap.getTotalTimeSeconds().intValue()) );
+        return ld;    
     }
 
     @Override
-    public String getTracksPorLap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Track getTracksPorLap() {
+        for (Lap lap : tcd.getActivities().getActivity().getLaps())
+            return lap.getTrack();
+        return null;
     }
-
-
 
 }
