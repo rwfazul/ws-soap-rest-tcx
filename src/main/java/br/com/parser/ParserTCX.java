@@ -7,7 +7,6 @@ package br.com.parser;
 
 import br.com.model.TrainingCenterDatabase;
 import java.io.File;
-import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.bind.JAXBContext;
@@ -21,12 +20,12 @@ import javax.xml.bind.Unmarshaller;
  */
 public class ParserTCX {
     
-    private static final String ABSOLUTEPATH = "/home/rhau/NetBeansProjects/ws-soap-tcx";
+    private static final String ABSOLUTEPATH = "/home/USER/NetBeansProjects/ws-soap-tcx";
     private static final String FILENAME = "rota1.tcx"; // rota2.tcx
     
     public static TrainingCenterDatabase unmarshal() {
         try {
-            /* Unmarshall */
+            /* Unmarshall */    
             JAXBContext jc = JAXBContext.newInstance(TrainingCenterDatabase.class);
             Unmarshaller unmarshaller = jc.createUnmarshaller();
             File xml = new File(ABSOLUTEPATH + "/" + FILENAME);
