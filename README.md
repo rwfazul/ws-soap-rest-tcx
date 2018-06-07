@@ -13,6 +13,8 @@ Neste projeto é realizado o parser de um arquivo XML no padrão Training Center
 
 Para o mapeamento, foi criado o modelo de classes correspondente ao arquivo [rota1.tcx](rota1.tcx) e [rota2.tcx](rota2.tcx), de modo que seja possível realizar o Marshal e UnMarshal utilizando [JAXB](https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding).
 
+* Lembre-se de alterar o caminho do arquivo TCX em parser.ParserTCX de acordo com seu ambiente.
+
 ## Jax-ws + Tomcat/Glassfish com Maven
 
 - pom.xml
@@ -27,3 +29,5 @@ Para o mapeamento, foi criado o modelo de classes correspondente ao arquivo [rot
 		- jaxws-api;
 		- ha-api;
 		- stax-ex.
+		
+
