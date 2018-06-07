@@ -57,5 +57,8 @@
             
             <p class="right">2018/1</p>
         </div>
+        <div class="wrapper">
+            <p>* Lembre-se de alterar o caminho do arquivo TCX em parser.ParserTCX de acordo com seu ambiente.</p>
+        </div>
     </body>
 </html>
